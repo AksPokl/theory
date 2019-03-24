@@ -5,12 +5,12 @@ O(1) - const
 O(n) - линейнo
 
                  Arraylist	LinkedList
-get(index)         +  O(1)	O(n)  -
-add(E)	           -  O(n)	O(1)  +
-add(E, index)         O(n)	O(n)
-remove(index)         O(n)	O(n)
-Iterator.remove()     O(n)	O(1)  +
-Iterator.add(E)       O(n)	O(1)  +
++ get(index)         +  O(1)	O(n)  -
++ add(E)	           -  O(n)	O(1)  +
++ (E, index)         O(n)	O(n)
++ remove(index)         O(n)	O(n)
++ Iterator.remove()     O(n)	O(1)  +
++ Iterator.add(E)       O(n)	O(1)  +
 
 
 Iterable -> Collection -> List || Set -> SortedSet ->NavigableSet
