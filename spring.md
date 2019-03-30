@@ -12,3 +12,6 @@ Interceptor:
 - preHandle
 - postHandle
 - afterCompletion (после того как ответ сформирован)
+
+@RestController объединяет в себе аннотации @Controller и @ResponseBody
+
