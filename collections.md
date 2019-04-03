@@ -62,5 +62,13 @@ size — Количество элементов HashMap-а;
 HashSet — реализация интерфейса Set, базирующаяся на HashMap. Внутри использует объект HashMap для хранения данных. В качестве ключа используется добавляемый элемент, а в качестве значения — объект-пустышка (new Object()). Из-за особенностей реализации порядок элементов не гарантируется при добавлении.
 
 
+- Queue<E> FIFO
+  - add (throws exception)
+  - offer (null)
+  - remove (throws exception)
+  - poll (null)
+  - element return a value (throws an exception)
+  - peek return a value (null)
 
+  
 
