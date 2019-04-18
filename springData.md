@@ -1,6 +1,7 @@
  Spring Data method signatures can also include any of these operators:
 - Equals, Between
-- IsAfter, After, IsGreaterThan, GreaterThan  IsGreaterThanEqual, GreaterThanEqual
+- IsAfter, After, IsGreaterThan, GreaterThan
+- IsGreaterThanEqual, GreaterThanEqual
 - IsBefore, Before, IsLessThan, LessThan
 - IsLessThanEqual, LessThanEqual
 - IsBetween, Between
