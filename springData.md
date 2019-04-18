@@ -10,3 +10,11 @@
 - IsIn, In
 - IsNotIn, NotIn
 - IsStartingWith, StartingWith, StartsWith
+- IsEndingWith, EndingWith, EndsWith  IsContaining, Containing, Contains
+- IsLike, Like
+- IsNotLike, NotLike
+- IsTrue, True
+- IsFalse, False
+- Is, Equals
+- IsNot, Not
+- IgnoringCase, IgnoresCase
