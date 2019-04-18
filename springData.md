@@ -10,7 +10,8 @@
 - IsIn, In
 - IsNotIn, NotIn
 - IsStartingWith, StartingWith, StartsWith
-- IsEndingWith, EndingWith, EndsWith  IsContaining, Containing, Contains
+- IsEndingWith, EndingWith, EndsWith
+- IsContaining, Containing, Contains
 - IsLike, Like
 - IsNotLike, NotLike
 - IsTrue, True
@@ -18,3 +19,7 @@
 - Is, Equals
 - IsNot, Not
 - IgnoringCase, IgnoresCase
+
+If you need to provide your custom query, you may use @Query with hql query, ex:
+@Query("Order o where o.deliveryCity='Seattle'")
+List<Order> readOrdersDeliveredInSeattle();
