@@ -73,3 +73,39 @@ Mapped Superclass это класс от которого наследуются
 JPA говорит о двух видов кэшей (cache):
 - first-level cache (кэш первого уровня) — кэширует данные одной транзакции,
 - second-level cache (кэш второго уровня) — кэширует данные дольше чем одна транзакция. Провайдер JPA может, но не обязан реализовывать работу с кэшем второго уровня. Такой вид кэша позволяет сэкономить время доступа и улучшить производительность, однако оборотной стороной является возможность получить устаревшие данные.
+
+PK Generating ex
+
+public class EntityPKGenerator extends SequenceStyleGenerator {
+
+    public static final String VALUE_PREFIX_PARAMETER = "valuePrefix";
+    public static final String VALUE_PREFIX_DEFAULT = "";
+    private String valuePrefix;
+
+
+    @Override
+    public Serializable generate(SharedSessionContractImplementor session,
+                                 Object object) throws HibernateException {
+        return valuePrefix + super.generate(session, object);
+    }
+
+    @Override
+    public void configure(Type type, Properties params,
+                          ServiceRegistry serviceRegistry) throws MappingException {
+        super.configure(LongType.INSTANCE, params, serviceRegistry);
+        valuePrefix = ConfigurationHelper.getString(VALUE_PREFIX_PARAMETER,
+                params, VALUE_PREFIX_DEFAULT);
+    }
+
+}
+
+    @Id
+    @GenericGenerator(
+            name = "project_seq",
+            strategy = "com.pts.rest.model.data.EntityPKGenerator",
+            parameters = {
+                    @org.hibernate.annotations.Parameter(name = EntityPKGenerator.INCREMENT_PARAM, value = "1"),
+                    @org.hibernate.annotations.Parameter(name = EntityPKGenerator.VALUE_PREFIX_PARAMETER, value = "PROJECT_")}
+                    )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "project_seq")
+
