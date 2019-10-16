@@ -2,6 +2,8 @@
 
 Термин Bean в Spring используется для ссылки на любой компонент, управляемый контейнером.
 
+ApplicationContext - это главный интерфейс в Spring-приложении, который предоставляет информацию о конфигурации приложения. Он доступен только для чтения во время выполнения, но может быть перезагружен при необходимости и поддержке приложением. 
+
 @Component Preferable for component scanning and automatic wiring.
 @Bean annotation returns an object that spring should register as bean in application context (custom declaration).
 
