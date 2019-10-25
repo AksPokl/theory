@@ -1,3 +1,11 @@
+
+Mutex (lock) and monitor:
+- locks provide necessary support for implementing monitors
+
+Мьютекс - это тип синхронайзера, который гарантирует, что только один поток может исполнять критичискую часть программы
+
+Each object in Java is associated with a monitor, which a thread can lock or unlock.
+
 CopyOnWrite коллекции: - Все операции по изменению коллекции (add, set, remove) приводят к созданию новой копии внутреннего массива. Тем самым гарантируется, что при проходе итератором по коллекции не кинется ConcurrentModificationException. Следует помнить, что при копировании массива копируются только референсы (ссылки) на объекты (shallow copy), т.ч. доступ к полям элементов не thread-safe. CopyOnWrite коллекции удобно использовать, когда write операции довольно редки
 
 ConcurrentHashMap<K, V>   — В отличие от Hashtable и блоков synhronized на HashMap, данные представлены в виде сегментов, разбитых по hash'ам ключей. В результате, для доступ к данным лочится по сегментам, а не по одному объекту. В дополнение, итераторы представляют данные на определенный срез времени и не кидают ConcurrentModificationException. 
