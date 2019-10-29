@@ -14,7 +14,19 @@ BeanPostProcessor:
 - postProcessorBeforeInitialization(Object bean, String beanName);
 - postProcessorAfterInitialization(Object bean, String beanName);
 
+BeanPostProcessor gives you a way to do some operations before creating the spring bean and immediately after creating the spring bean.
+
 Между вызовами методов postProcessorBeforeInitialization и postProcessorAfterInitialization происходит вызов init-метода, если он есть.
+
+Жизненный цикл бина:
+- Instantiate
+- populate propeties
+- setBeanName if BeanNameAware implemented
+- setBeanFactory if BeanFactoryAwere implemented
+- pre-initialization BeanPostProcessor
+- after properties set
+- custom init-method
+- post-initialization BeanPostProcessor
 
 Существует четыре вида связывания в спринг:
 - autowire byName,
