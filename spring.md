@@ -1,4 +1,6 @@
-Внедрение зависимости (Dependency injection, DI) — процесс предоставления внешней зависимости программному компоненту. 
+IoC - набор рекомендаций для написания слабо связанного кода 
+
+Внедрение зависимости (Dependency injection, DI) — прямая реализация IoC, процесс предоставления внешней зависимости программному компоненту. 
 
 Термин Bean в Spring используется для ссылки на любой компонент, управляемый контейнером.
 
@@ -19,12 +21,12 @@ BeanPostProcessor gives you a way to do some operations before creating the spri
 Между вызовами методов postProcessorBeforeInitialization и postProcessorAfterInitialization происходит вызов init-метода, если он есть.
 
 Жизненный цикл бина:
-- Instantiate
-- populate propeties
+- Instantiate Spring создает экземпляр компонента.
+- populate propeties  Spring внедряет значения и ссылки на компоненты в свойства данного компонента.
 - setBeanName if BeanNameAware implemented
 - setBeanFactory if BeanFactoryAwere implemented
 - pre-initialization BeanPostProcessor
-- after properties set
+- after properties set after all bean properties have been set.
 - custom init-method
 - post-initialization BeanPostProcessor
 
