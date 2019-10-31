@@ -12,3 +12,5 @@
 
 Внедрение (англ. introduction, введение) — изменение структуры класса и/или изменение иерархии наследования для добавления функциональности аспекта в инородный код. Обычно реализуется с помощью некоторого метаобъектного протокола (англ. metaobject protocol, MOP).
 
+@Aspect -> @Pointcut(Joincut e.g Annotation @KycStepCompleted) -> advice (e.g @AfterReturning, @Before) 
+
