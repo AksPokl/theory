@@ -2,7 +2,7 @@ IoC - набор рекомендаций для написания слабо �
 
 Внедрение зависимости (Dependency injection, DI) — прямая реализация IoC, процесс предоставления внешней зависимости программному компоненту. 
 
-ApplicationContext — реализация IOC спрингом.
+ApplicationContext — реализация IOC спрингом (AOP, BeanPostProcessor auto registration)
 
 Bean Factory — это базовая версия IOC контейнера
 
@@ -33,6 +33,7 @@ BeanPostProcessor gives you a way to do some operations before creating the spri
 - populate propeties  Spring внедряет значения и ссылки на компоненты в свойства данного компонента.
 - setBeanName if BeanNameAware implemented
 - setBeanFactory if BeanFactoryAwere implemented
+- setApplicationContext if ApplicationContextAware implemented 
 - pre-initialization BeanPostProcessor
 - after properties set after all bean properties have been set.
 - custom init-method
