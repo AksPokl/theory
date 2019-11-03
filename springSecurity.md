@@ -6,6 +6,7 @@ Spring Security offers several options for configuring a user store, including t
 
 
 OAuth 2.0 — протокол авторизации, позволяющий выдать одному сервису (приложению) права на доступ к ресурсам пользователя на другом сервисе.
+Для построения OAuth2-приложения нам необходимо знать Grant Type (код авторизации), Client ID и Client secret.
 
 OpenID Connect - это простой слой идентификации, созданный поверх протокола OAuth 2.0
 
