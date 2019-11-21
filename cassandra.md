@@ -1,0 +1,6 @@
+- Node is the place where data is stored. It is the basic component of Cassandra.
+- Data Center - a collection of nodes are called data center. Many nodes are categorized as a data center.
+- The cluster is the collection of many data centers.
+- Every write operation is written to Commit Log. Commit log is used for crash recovery.
+- Mem-table - After data written in Commit log, data is written in Mem-table. Data is written in Mem-table temporarily.
+- SSTable - When Mem-table reaches a certain threshold, data is flushed to an SSTable disk file.
