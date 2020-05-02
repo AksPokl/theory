@@ -26,4 +26,5 @@ SparkContext - соединение между кластером Spark и од�
 - Преобразования (transformations, функции, возвращающие другой набор)
 
 Схема запуска Spark в распределенной системе:
-![Image alt](https://github.com/AksPokl/theory/blob/master/images/Screen%20Shot%202020-05-02%20at%205.01.42%20PM.png)
+
+<img src="https://github.com/AksPokl/theory/blob/master/images/Screen%20Shot%202020-05-02%20at%205.01.42%20PM.png" width="450"/>
