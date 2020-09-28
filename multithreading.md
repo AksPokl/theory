@@ -2,7 +2,7 @@ Each object in Java is associated with a monitor, which a thread can lock or unl
 
 CopyOnWrite коллекции: - Все операции по изменению коллекции (add, set, remove) приводят к созданию новой копии внутреннего массива. Тем самым гарантируется, что при проходе итератором по коллекции не кинется ConcurrentModificationException. Следует помнить, что при копировании массива копируются только референсы (ссылки) на объекты (shallow copy), т.ч. доступ к полям элементов не thread-safe. CopyOnWrite коллекции удобно использовать, когда write операции довольно редки
 
-ConcurrentHashMap<K, V>   — В отличие от Hashtable и блоков synhronized на HashMap, данные представлены в виде сегментов, разбитых по hash'ам ключей. В результате, для доступ к данным лочится по сегментам, а не по одному объекту. В дополнение, итераторы представляют данные на определенный срез времени и не кидают ConcurrentModificationException. 
+ConcurrentHashMap<K, V>   — В отличие от Hashtable и блоков synhronized на HashMap, данные представлены в виде сегментов, разбитых по hash'ам ключей. В результате, для доступ к данным лочится по сегментам, а не по одному объекту. В дополнение, итераторы представляют данные на определенный срез времени и не кидают ConcurrentModificationException. Entry в ConcurrentHashMap объявлены как volatile. 
 
 Blocking Queues:
  - Blocking queues provide blocking put and take methods. If the queue is full, put blocks until space becomes available; if the queue is empty, take blocks until an element is available. 
