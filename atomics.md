@@ -1,6 +1,6 @@
 Atomics реализуют "Compare and Set operation".
 Ex:
-private volatile long value;
+```private volatile long value;
 
 public final long get() {
     return value;
@@ -14,6 +14,7 @@ public final long getAndAdd(long delta) {
             return current;
     }
 }
+``` 
 
 Метод compareAndSet представляет из себя механизм оптимистичной блокировки и позволяет изменить значение value, только если оно равно ожидаемому значению (т.е. current).
 
